@@ -10,14 +10,12 @@ A Claude Code skill that sets up `anthropics/claude-code-action` (automated PR r
 
 ## Install
 
-Clone into your Claude Code skills directory (user-level, available across all projects):
+This repo is a Claude Code plugin marketplace. No cloning required, install directly from inside Claude Code:
 
-```bash
-git clone https://github.com/zxzinn/claude-code-review-workflow-creator-skill.git ~/.claude/skills/setup-claude-review-src
-ln -s ~/.claude/skills/setup-claude-review-src/skills/setup-claude-review ~/.claude/skills/setup-claude-review
 ```
-
-Or copy `skills/setup-claude-review/` directly into `~/.claude/skills/` or a project's `.claude/skills/`.
+/plugin marketplace add zxzinn/claude-code-review-workflow-creator-skill
+/plugin install setup-claude-review@claude-code-review-workflow-creator-skill
+```
 
 ## Usage
 
@@ -31,8 +29,8 @@ Claude will scan the project, install the workflows, and draft `REVIEW.md` for y
 
 ## Why not a reusable workflow?
 
-The two workflow files (`claude-code-review.yml`, `claude.yml`) rarely change once installed, and `REVIEW.md` content is inherently project-specific — it should never be shared across repos. A `workflow_call` architecture also runs into secret-sharing limits across separate GitHub accounts/orgs (see the design notes in `skills/setup-claude-review/SKILL.md`). Copying a template once per project is simpler and avoids those cross-account constraints.
+The two workflow files (`claude-code-review.yml`, `claude.yml`) rarely change once installed, and `REVIEW.md` content is inherently project-specific: it should never be shared across repos. A `workflow_call` architecture also runs into secret-sharing limits across separate GitHub accounts/orgs (see the design notes in `plugins/setup-claude-review/skills/setup-claude-review/SKILL.md`). Copying a template once per project is simpler and avoids those cross-account constraints.
 
 ## Prerequisites
 
-- `CLAUDE_CODE_OAUTH_TOKEN` secret configured in the target repo (or org). Run `/install-github-app` from Claude Code against the repo, or configure manually — see [Claude Code GitHub Actions docs](https://code.claude.com/docs/en/github-actions).
+- `CLAUDE_CODE_OAUTH_TOKEN` secret configured in the target repo (or org). Run `/install-github-app` from Claude Code against the repo, or configure manually: see [Claude Code GitHub Actions docs](https://code.claude.com/docs/en/github-actions).

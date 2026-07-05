@@ -1,0 +1,13 @@
+{
+  "name": "claude-code-review-workflow-creator-skill",
+  "owner": {
+    "name": "zxzinn"
+  },
+  "plugins": [
+    {
+      "name": "setup-claude-review",
+      "source": "./plugins/setup-claude-review",
+      "description": "Scaffolds Claude Code GitHub Actions (PR auto-review + interactive @claude) for a project, including a project-specific REVIEW.md drafted from a scan of the actual codebase."
+    }
+  ]
+}

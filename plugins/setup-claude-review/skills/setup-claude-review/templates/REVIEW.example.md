@@ -1,7 +1,7 @@
 # REVIEW.md
 
 <!--
-Reference example only — illustrates the level of specificity a good
+Reference example only. Illustrates the level of specificity a good
 REVIEW.md needs. Do NOT copy this into a new project verbatim: every
 rule below was mined from one specific Django codebase's real bugs and
 conventions. A REVIEW.md for a different project must be mined from
@@ -28,7 +28,7 @@ All review comments MUST be written in English.
   # CORRECT
   self.original_name = self.name if 'name' in self.__dict__ else None
 
-  # WRONG — causes RecursionError with .only()/.defer()
+  # WRONG, causes RecursionError with .only()/.defer()
   self.original_name = self.name
   ```
 
