@@ -1,7 +1,7 @@
 {
   "name": "setup-claude-review",
   "description": "Scaffolds Claude Code GitHub Actions (PR auto-review + interactive @claude) for a project, including a project-specific REVIEW.md drafted from a scan of the actual codebase.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "zxzinn"
   }

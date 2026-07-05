@@ -58,6 +58,8 @@ jobs:
 
             Review this pull request according to the priorities and focus areas defined in REVIEW.md at the repository root. If REVIEW.md does not exist, fall back to general code quality, correctness, performance, security, and test coverage review, and use CLAUDE.md for style/convention guidance.
 
+            If REVIEW.md has a "Known Tech Debt" section, treat it as reference only: do NOT raise those items as review comments unless this PR is specifically the one fixing them. Do not flag other changed code merely for matching a pattern listed there if the PR did not introduce or touch that code.
+
             IMPORTANT: You MUST use the `mcp__github_inline_comment__create_inline_comment` tool to post review comments directly on the specific lines of code where issues are found. Do NOT put all feedback in a single comment. Each issue should be an inline comment on the relevant line in the diff. Only use a regular PR comment for the final summary.
 
           claude_args: |
